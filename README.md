@@ -1,8 +1,18 @@
 # Template
 
-![Example Image](assets/img/PerytonSpaceLogo.png)
+![Mission Statement](assets/img/mission-statement.jpg)
 
-```
-![Example Image](assets/img/PerytonSpaceLogo.png)
 
-```
+
+
+
+
+
+
+
+
+
+
+
+![Peryton Space](assets/img/PerytonSpaceLogo.png)
+
