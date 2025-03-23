@@ -12,7 +12,7 @@ float_to_hex() {
 # Ensure CAN interface is up
 if ! ip link show "$CAN_INTERFACE" | grep -q "UP"; then
     echo "Error: CAN interface $CAN_INTERFACE is not up. Bringing it up..."
-    sudo ip link set "$CAN_INTERFACE" up type can bitrate 500000
+    sudo ip link set "$CAN_INTERFACE" up type can bitrate 250000
     sleep 2
 fi
 

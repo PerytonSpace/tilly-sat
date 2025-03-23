@@ -16,13 +16,13 @@ void setup() {
 }
 
 void loop() {
-    if (mcp2515.readMessage(&canMsg) == MCP2515::ERROR_OK) {
+    //if (mcp2515.readMessage(&canMsg) == MCP2515::ERROR_OK) {
         if (canMsg.can_id == 0x100) {  // Check if it's our pressure data
             float pressure = hexToFloat(canMsg.data);
             Serial.print("Received Pressure: ");
             Serial.println(pressure, 2);  // Print with 2 decimal places
         }
-    }
+    //}
 }
 
 // Function to convert 4-byte HEX to float
