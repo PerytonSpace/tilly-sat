@@ -19,7 +19,8 @@ void setup()
   Serial.begin(115200);
 
       delay(2000);
-  Serial.println("START");
+    Serial.println("CAN_receive_pico");
+    delay(2000);
 
   SPI.begin();
   
