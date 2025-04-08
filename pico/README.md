@@ -59,7 +59,14 @@ https://github.com/adafruit/RTClib
 ```
 Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/pcf8523).
 
+## Internal ADC
 
+The Pi Pico has an internal Analog-to-Digital Converter, which converts a measured volatge to a numerical value which is a ratio of th emeasured value to the reference volatge - typically 3.3V.
+
+two examples, internal V temp, Vsys and then an external temperature sensor.
+
+
+Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/mpu6050).
 
 
 
