@@ -10,16 +10,8 @@ Adafruit_MPU6050 mpu;
 
 void setup(void) {
 
-    // To change the default I2C pins
-    //
-    //
-
-    //Defaults are:
-    //  I2C 0
-    //  SDA GPIO 4    
-    //  SCL GPIO 5
-
-
+    // Wire.setSDA(); // To change the SDA pin for I2C0
+    // Wire.setSCL(); // To change the SCL pin for I2C0
     Wire.begin();
 
     Serial.begin(115200);
@@ -29,7 +21,7 @@ void setup(void) {
 
   // Try to initialize!
 //   if (!mpu.begin(0x68,&CustomI2C0,0)) {
-    if (!mpu.begin(0x68)) {
+  if (!mpu.begin(0x68)) {
     Serial.println("Failed to find MPU6050 chip");
     while (1) {
       delay(10);
