@@ -2,7 +2,7 @@
 TillySat utilizes the Raspberry Pi Pico microcontroller which can be coded in the ARduino IDE or can be coded using the Raspberry Pi C/C++ SDK, a way to code the Pico in C or C++ and have a more hands on approach to programming the Pico than using Arduino.
 
 <p align="center">
-<img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/raspberry-pi-pico.jpeg" width = 20% height = 20%>
+<img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/raspberry-pi-pico.jpg" width = 20% height = 20%>
 </p>
 
 ## Using the Pico in Arduino
