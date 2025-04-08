@@ -5,6 +5,10 @@ TillySat utilizes the Raspberry Pi Pico microcontroller which can be coded in th
 <img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/raspberry-pi-pico.jpg" width = 20% height = 20%>
 </p>
 
+Also remember to `only use 3.3V!`, attaching 5V to any of the input GPIOs can damage the Pico. 
+<br>
+Normal Arduinos use 5V.
+
 ## Using the Pico in Arduino
 
 Arduino lets us code and talk to official Arduino Microcontrollers, but also allows the use of third party boards with the help of a board manager. 
@@ -85,31 +89,23 @@ Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico
 
 ## Internal ADC
 
-The Pi Pico has an internal Analog-to-Digital Converter, which converts a measured volatge to a numerical value which is a ratio of the measured value to the reference volatge - typically 3.3V.
+The Pi Pico has an internal Analog-to-Digital Converter, which converts a measured voltage to a numerical value which is a ratio of the measured value to the reference voltage - typically 3.3V.
 
 two examples, internal V temp, Vsys and then an external temperature sensor.
 
 
 Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/mpu6050).
 
-\
-\
-\
-\
-
-
+<br>
+<br>
+<br>
 
 <p align="center">
 <img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/pico-pinout.jpg" width = 20% height = 20%>
 </p>
 
-
-\
-\
-\
-\
-
-
+<br>
+<br>
 
 
 <p align="center">
