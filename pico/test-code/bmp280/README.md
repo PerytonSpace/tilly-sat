@@ -12,4 +12,17 @@ A more indepth Adafruit Guide can be found [here](https://learn.adafruit.com/ada
 Here is a standard BMP280 breakout board. The actual BMP280 sensor itself is the small silver component in the centre of the board. This uses the small hole to calculate the air pressure so be careful to not touch the sensor and keep it clean.
 
 <br>
-Connect the 3V3
+Connect the VCC pin to the 3V3(OUT) pin of the Pico. Connect GND to any of the GND pins on the Pico. We will be using the default `I2C0` pins. `SDA` goes to `GPIO 4` and `SCL` goes to `GPIO 5`.
+<br>
+
+```
+VCC ---> 3V3(OUT)
+GND ---> GND
+SCL ---> GPIO 5
+SDA ---> GPIO 4
+```
+
+<br>
+
+Try blowing on the sensor and changing the height of the sensor to see the change in values. It might be useful to reduce the delay in the loop to see this.
+
