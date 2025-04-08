@@ -26,3 +26,4 @@ SDA ---> GPIO 4
 
 Try blowing on the sensor and changing the height of the sensor to see the change in values. It might be useful to reduce the delay in the loop to see this.
 
+The `CSB` and `SDO` pins are used for SPI.
