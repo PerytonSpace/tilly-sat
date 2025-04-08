@@ -7,7 +7,7 @@ TillySat utilizes the Raspberry Pi Pico microcontroller which can be coded in th
 
 ## Using the Pico in Arduino
 
-Arduino lets us code and talk to official Arduino Microcontrollers, but also allow the use to talk to third party board with the help of a board manager. 
+Arduino lets us code and talk to official Arduino Microcontrollers, but also allows the use of third party boards with the help of a board manager. 
 
 A board manager just allows Arduino to program different types of architectures and boards, using the Arduino language.
 
@@ -18,7 +18,31 @@ For the Board Manager URL, we will be using the [earlephilhower](https://github.
 ```
 https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 ```
-This link allows you to then download the board manager from the Board Manager tab and search for Pi Pico.
+This link allows you to then download the board manager from the Board Manager tab in the Arduino IDE and search for Pi Pico.
+### Pico unique
+#### Using I2C
+
+By default the Pi Pico uses `GPIO 4 ` for  `SDA0` and `GPIO 5` for `SCL0`
+To change these from default make sure to declare them before `Serial.begin();` and to include `<Wire.h>`
+
+```
+#include <Wire.h>
+
+
+void setup(){
+    Wire.setSDA(X);
+    Wire.setSCL(X);
+    Wire.begin();
+    Serial.begin(115200);
+    ...
+}
+
+```
+Where `x` is the value of the GPIO pin number. If using `I2C1` then use `Wire1`. `Wire` and `Wire1` can be used in the same code, meaning the different I2C interfaces.
+
+#### Using SPI
+BY default the pico uses `SPI0` using GPIO pins 18-20
+
 
 # Code Examples
 Below are examples to use with the Pi Pico which are relevant to TillySat, such as interfacing with specific sensors or using certain communication protocols. 
@@ -61,21 +85,29 @@ Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico
 
 ## Internal ADC
 
-The Pi Pico has an internal Analog-to-Digital Converter, which converts a measured volatge to a numerical value which is a ratio of th emeasured value to the reference volatge - typically 3.3V.
+The Pi Pico has an internal Analog-to-Digital Converter, which converts a measured volatge to a numerical value which is a ratio of the measured value to the reference volatge - typically 3.3V.
 
 two examples, internal V temp, Vsys and then an external temperature sensor.
 
 
 Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/mpu6050).
 
+\
+\
+\
+\
 
 
 
+<p align="center">
+<img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/pico-pinout.jpg" width = 20% height = 20%>
+</p>
 
 
-
-
-
+\
+\
+\
+\
 
 
 
