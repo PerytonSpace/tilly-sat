@@ -101,7 +101,7 @@ Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico
 <br>
 
 <p align="center">
-<img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/pico-pinout.jpg" width = 20% height = 20%>
+<img src="https://github.com/PerytonSpace/tilly-sat/blob/main/assets/img/pico/pico-pinout.jpg" width = 50% height = 50%>
 </p>
 
 <br>
