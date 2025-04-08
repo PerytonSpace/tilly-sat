@@ -43,11 +43,22 @@ Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico
 The MPU6050 is an Interial-Measurement Unit (IMU), which can measure the acceleration and rotational velocity of the sensor. Some variants also include a magnetometer. The MPU6050 communicated over I2C or SPI, for this example we will use I2C.
 
 Library 
-Adafruit BMP280 Library
+Adafruit MPU6050 Library
 ```
-https://github.com/adafruit/Adafruit_BMP280_Library
+https://github.com/adafruit/Adafruit_MPU6050
 ```
-Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/bmp280).
+Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/mpu6050).
+
+## PCF8523 RTC
+keeps track of the time, from when it gets set by the user, 
+
+Library 
+Adafruit RTCLib Library
+```
+https://github.com/adafruit/RTClib
+```
+Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico/test-code/pcf8523).
+
 
 
 
