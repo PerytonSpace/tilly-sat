@@ -14,6 +14,8 @@ Here is a standard BMP280 breakout board. The actual BMP280 sensor itself is the
 <br>
 Connect the VCC pin to the 3V3(OUT) pin of the Pico. Connect GND to any of the GND pins on the Pico. We will be using the default `I2C0` pins. `SDA` goes to `GPIO 4` and `SCL` goes to `GPIO 5`.
 <br>
+The BMP280 has a default I2C address of 0x76, this can be changed to 0x77 by connecting the `SD0` pin to `GND`.
+<br>
 
 ```
 VCC ---> 3V3(OUT)
