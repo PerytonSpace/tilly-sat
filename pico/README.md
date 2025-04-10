@@ -45,7 +45,35 @@ void setup(){
 Where `x` is the value of the GPIO pin number. If using `I2C1` then use `Wire1`. `Wire` and `Wire1` can be used in the same code, meaning the different I2C interfaces.
 
 #### Using SPI
-BY default the pico uses `SPI0` using GPIO pins 18-20
+By default the pico uses `SPI0` using GPIO pins 18-20
+
+```
+/* Default Pins */
+MISO    ---     GPIO 16
+MOSI    ---     GPIO 19
+SCK     ---     GPIO 18
+CS      ---     GPIO 17
+```
+<br/>
+
+Note `CS` needs to different for multiple devices used on the same SPI bus. `CS` can also be assigned to any normal GPIO pin number.
+
+```
+#include <Wire.h>
+#include <SPI.h>
+
+
+void setup(){
+    SPI.setSCK(X);  // SCK Pin
+    SPI.setTX(X);   // MOSI Pin
+    SPI.setRX(X);   // MISO Pin
+    SPI.setCS(X);   // CS Pin
+    SPI.begin();
+    Serial.begin(115200);
+    ...
+}
+
+```
 
 
 # Code Examples
@@ -68,7 +96,7 @@ Find the example [here](https://github.com/PerytonSpace/tilly-sat/tree/main/pico
 
 ## MPU6050
 
-The MPU6050 is an Interial-Measurement Unit (IMU), which can measure the acceleration and rotational velocity of the sensor. Some variants also include a magnetometer. The MPU6050 communicated over I2C or SPI, for this example we will use I2C.
+The MPU6050 is an Inertial-Measurement Unit (IMU), which can measure the acceleration and rotational velocity of the sensor. Some variants also include a magnetometer. The MPU6050 communicated over I2C or SPI, for this example we will use I2C.
 
 Library 
 Adafruit MPU6050 Library
