@@ -31,6 +31,5 @@ AD0 ---> 3V3 (0x69)
 
 <br>
 
-Try blowing on the sensor and changing the height of the sensor to see the change in values. It might be useful to reduce the delay in the loop to see this.
+Try tilting the sensor on each of it's axis and use the serial plotter to observe the changes in acceleration.
 
-The `CSB` and `SDO` pins are used for SPI.
