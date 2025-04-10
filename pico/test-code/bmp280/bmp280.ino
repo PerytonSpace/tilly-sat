@@ -8,14 +8,23 @@
 
  void setup() {
 
-    // Wire.setSDA(); // To change the SDA pin for I2C0
-    // Wire.setSCL(); // To change the SCL pin for I2C0
-    Wire.begin(); // Initaliasing I2C0
+  //Wire.setSDA(8); // To change the SDA pin for I2C0
+  //Wire.setSCL(9); // To change the SCL pin for I2C0
+  Wire.begin(); // Initaliasing I2C0
    Serial.begin(115200);
    // while ( !Serial ) delay(100);  // This will not start the program until the serial port is opened
    delay(3000);                     // This waits 3 seconds allowing the Pico to connect to the USB output
 
    Serial.println(F("|TillySat BMP280 test"));
+
+     if(!bmp.begin(0x76)){
+    Serial.println("BMP 280 Error");
+    //while (1) delay(10);
+  }
+  else{
+    Serial.println("BMP 280 Check");
+
+  }
 
    /* Default settings from datasheet. */
    bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
