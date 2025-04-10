@@ -5,7 +5,7 @@
 #include <Wire.h>
 
 Adafruit_MPU6050 mpu;
-//TwoWire CustomI2C0(20, 21); //important
+//TwoWire CustomI2C0(8, 9); //important
 
 
 void setup(void) {
@@ -20,8 +20,9 @@ void setup(void) {
   Serial.println("TillySat MPU6050 test!");
 
   // Try to initialize!
-//   if (!mpu.begin(0x68,&CustomI2C0,0)) {
+ // if (!mpu.begin(0x68,&CustomI2C0,0)) {
   if (!mpu.begin(0x68)) {
+  // if (!mpu.begin(0x69)) {
     Serial.println("Failed to find MPU6050 chip");
     while (1) {
       delay(10);
@@ -32,7 +33,8 @@ void setup(void) {
   mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
   mpu.setGyroRange(MPU6050_RANGE_500_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
-  Serial.println("");
+ 
+ Serial.println("");
   delay(100);
 }
 
